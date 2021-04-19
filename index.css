@@ -21,7 +21,10 @@
 	display: flex;
 	align-content:center;
 	justify-content: space-around;
-	margin: 3em 1em
+	margin: 3em 1em;	
+	position: relative;
+	animation-name: title;
+	animation-duration: 1s;
 }
 
 .header-title__h1{
@@ -45,6 +48,11 @@
 	grid-template-rows: repeat(10,5.4em);
 	justify-content: center;
 	margin: 0 5em 14em 14em;
+	animation-name: fade-in;
+	animation-duration: 1.5s;
+	transition-duration: 1.5s all ease-out;
+	animation-delay: 400ms;
+	animation-timing-function: ease-out;
 }
 
 .crew-container__div:first-child{
@@ -87,6 +95,30 @@
 	color: #ccc;
 	display: flex;
 	justify-content: center; 
+}
+
+@keyframes title{
+	0%{
+		top:-100em; 
+	}
+
+	100%{
+		top: 0;
+	}
+}
+
+@keyframes fade-in{
+	0%{
+		filter: opacity(0%);
+	}
+
+	50%{
+		filter: opacity(50%);
+	}
+
+	100%{
+		filter: opacity(100%);
+	}
 }
 
 @media only screen and (max-width: 1125px){
