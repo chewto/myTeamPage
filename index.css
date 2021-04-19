@@ -1,0 +1,276 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 15px;
+}
+
+.main-margin{
+	margin: 2.5em 4em 0 0;
+}
+
+.PT-serif{
+	font-family: 'PT Serif', serif;
+}
+
+.Poppins{
+	font-family: 'Poppins', sans-serif;
+}
+
+.header{
+	display: flex;
+	align-content:center;
+	justify-content: space-around;
+	margin: 3em 1em
+}
+
+.header-title__h1{
+	font-weight: 700;
+	font-size: 1.6em;
+}
+
+.header-paragraph__h3{
+	font-weight: 600;
+	font-size: 1.1em;
+}
+
+.header-paragraph__p{
+	font-weight: 400;
+	font-size: .9em;
+}
+
+.crew-container{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: repeat(10,5.4em);
+	justify-content: center;
+	margin: 0 5em 14em 14em;
+}
+
+.crew-container__div:first-child{
+	grid-row: 1/4;
+}
+
+.crew-container__div:nth-child(2){
+	grid-row: 2/5;
+}
+
+.crew-container__div:nth-child(3){
+	grid-row: 1/4;
+}
+
+.crew-container__div:nth-child(4){
+	grid-row: 7/9;
+}
+
+.crew-container__div:nth-child(5){
+	grid-row: 8/10;
+}
+
+.crew-container__div:nth-child(6){
+	grid-row: 7/9;
+}
+
+.crew-container__img{
+	width: 15.5em;
+	height: 21.6em;
+}
+
+.crew-container__profession{
+	font-weight: 400;
+	font-size: .9em;
+	transform:  rotate(90deg) translateY(-6.1em) translateX(13em);
+}
+
+.footer{
+	font-family: monospace;
+	color: #ccc;
+	display: flex;
+	justify-content: center; 
+}
+
+@media only screen and (max-width: 1125px){
+	
+	.crew-container{
+		grid-template-columns: repeat(3,1fr);
+		grid-template-rows: repeat(10,5em);
+	}
+
+	.crew-container__img{
+		width: 13.5em;
+		height: 19em;
+	}
+
+	.crew-container__profession{
+		transform:  rotate(90deg) translateY(-6.4em) translateX(10.2em);
+	}
+}
+
+
+@media only screen and (max-width: 1025px){
+
+	.crew-container__profession{
+		transform:  rotate(90deg) translateY(-7.4em) translateX(9.1em);
+	}
+}
+
+@media only screen and (max-width: 768px){
+
+	.header-title__h1{
+		font-size: 1.3em;
+		margin: 0;
+	}
+
+	.header-paragraph__h3{
+		font-weight: 600;
+		font-size: 1.1em;
+	}
+
+	.header-paragraph__p{
+		font-weight: 400;
+		font-size: .9em;
+	}
+
+	.crew-container{
+		grid-template-columns: repeat(3, 10em);
+		grid-template-rows: repeat(14,5em);
+		grid-column-gap: 1.2em;
+		margin: 0 5em 18em 2.5em;
+	}
+	
+	.crew-container__img{
+		width: 13.5em;
+		height: 19em;
+	}
+
+	.crew-container__name{
+		font-size: .7em;
+	}
+
+	.crew-container__profession{
+		transform:  rotate(90deg) translateY(-10.3em) translateX(6.5em);
+	}
+
+	.crew-container__div:first-child{
+		grid-row: 1/4;
+	}
+
+	.crew-container__div:nth-child(2){
+		grid-column: 3/4;
+		grid-row: 2/4;
+	}
+
+	.crew-container__div:nth-child(3){
+		grid-row: 6/8;
+	}
+
+	.crew-container__div:nth-child(4){
+		grid-column: 3/4;
+		grid-row: 7/9;
+	}
+
+	.crew-container__div:nth-child(5){
+		grid-row: 11/13;
+	}
+
+	.crew-container__div:nth-child(6){
+		grid-column: 3/4;
+		grid-row: 12/14;
+	}
+
+	.footer{
+		font-size: .8em;
+	}
+}
+
+@media only screen and (max-width: 425px){
+	
+	.header{
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		margin: 3em 1em
+	}
+
+	.header-title__h1{
+		font-size: 1.5em;
+		margin: 0 0 .5em;
+	}
+
+	.header-paragraph__h3{
+		font-weight: 600;
+		font-size: 1.2em;
+	}
+
+	.header-paragraph__p{
+		font-weight: 400;
+		font-size: .9em;
+	}
+
+	.crew-container{
+		grid-template-columns: repeat(3, 5.5em);
+		grid-template-rows: repeat(14,4em);
+		grid-column-gap: 1.2em;
+		margin: 0 5em 14em 3em;
+	}
+
+	.crew-container__img{
+		width: 11em;
+		height: 15em;
+	}
+
+	.crew-container__profession{
+		font-size: .75em;
+		transform:  rotate(90deg) translateY(-11.7em) translateX(4.5em);
+	}
+}
+
+@media only screen and (max-width: 375px){
+	.header-title__h1{
+		font-size: 1.4em;
+	}
+
+	.header-paragraph__h3{
+		font-size: 1.1em;
+	}
+
+	.header-paragraph__p{
+		font-size: .75em;
+	}	
+
+	.crew-container__img{
+		width: 9.5em;
+		height: 14em;
+	}
+
+	.crew-container{
+		grid-template-columns: repeat(3, 5.3em);
+		grid-template-rows: repeat(14,4em);
+		grid-column-gap: .6em;
+		margin: 0 2em 18em 1.8em;
+	}
+
+	.crew-container__profession{
+		transform:  rotate(90deg) translateY(-9.8em) translateX(4.4em);
+	}
+
+}
+
+@media only screen and (max-width: 325px){
+	
+	.crew-container{
+		grid-template-columns: repeat(3, 5.2em);
+		grid-template-rows: repeat(14,3.4em);
+		grid-column-gap: 0;
+		margin: 0 .5em 12em 1.6em;
+	}
+
+	.crew-container__img{
+		width: 8em;
+		height: 11.5em;
+	}
+	.crew-container__profession{
+		font-size: .7em;
+		transform:  rotate(90deg) translateY(-8.4em) translateX(4.4em);
+	}
+
+}
